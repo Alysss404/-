@@ -5,7 +5,7 @@ import pandas as pd
 # import numpy as np
 # import datetime
 from sqlalchemy import create_engine
-# DB_STRING = 'mysql+mysqlconnector://user:passwd@127.0.0.1/database?charset=utf8'
+# DB_STRING = 'mysql+mysqlconnector://user:passwd@localhost/database?charset=utf8'
 st.title("生态驾驶评分系统")
 # st.header("范例")
 
@@ -62,7 +62,7 @@ with expander:
         st.write(uploaddf)
     #index =false 是不展示dataframe的index列  if_exists ‘append’代表 表存在即追加，‘replace’代表重建
     if st.button('上传到数据库'):
-        engine = create_engine('mysql+pymysql://root:213203655Snow@10.203.133.205/new_demo1?charset=utf8')
+        engine = create_engine('mysql+pymysql://root:213203655Snow@localhost/new_demo1?charset=utf8')
         uploaddf.to_sql('upload', engine, index=False, if_exists='append')
         st.success("上传成功!")
 
