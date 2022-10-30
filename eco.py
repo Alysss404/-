@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 st.title("生态驾驶评分系统")
 # st.header("范例")
 
-db = pymysql.connect(host='localhost',  # host属性
+db = pymysql.connect(host='10.203.133.205',  # host属性
                      user='root',  # 用户名
                      password='213203655Snow',  # 此处填登录数据库的密码
                      db='new_demo1'  # 数据库名
@@ -62,7 +62,7 @@ with expander:
         st.write(uploaddf)
     #index =false 是不展示dataframe的index列  if_exists ‘append’代表 表存在即追加，‘replace’代表重建
     if st.button('上传到数据库'):
-        engine = create_engine('mysql+pymysql://root:213203655Snow@localhost/new_demo1?charset=utf8')
+        engine = create_engine('mysql+pymysql://root:213203655Snow@10.203.133.205/new_demo1?charset=utf8')
         uploaddf.to_sql('upload', engine, index=False, if_exists='append')
         st.success("上传成功!")
 
