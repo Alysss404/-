@@ -9,9 +9,9 @@ from sqlalchemy import create_engine
 st.title("生态驾驶评分系统")
 # st.header("范例")
 
-db = pymysql.connect(host='127.0.0.1',  # host属性
-                     user='eco',  # 用户名
-                     password='123456',  # 此处填登录数据库的密码
+db = pymysql.connect(host='10.203.171.128',  # host属性
+                     user='root',  # 用户名
+                     password='213203655Snow',  # 此处填登录数据库的密码
                      db='new_demo1'  # 数据库名
                      )
 
