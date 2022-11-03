@@ -10,7 +10,7 @@ st.title("生态驾驶评分系统")
 # st.header("范例")
 
 db = pymysql.connect(host='192.168.43.17',  # host属性
-                     port = 3307,  # 端口号
+                     port = 3306,  # 端口号
                      user='root',  # 用户名
                      password='213203655Snow',  # 此处填登录数据库的密码
                      db='new_demo1'  # 数据库名
