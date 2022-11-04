@@ -9,12 +9,7 @@ from sqlalchemy import create_engine
 st.title("生态驾驶评分系统")
 # st.header("范例")
 
-db = pymysql.connect(host='10.203.158.7',  # host属性
-                     port = 3306,  # 端口号
-                     user='eco',  # 用户名
-                     password='123456',  # 此处填登录数据库的密码
-                     db='new_demo1'  # 数据库名
-                     )
+db = pymysql.connect(**st.secrets["mysql"])
 
 cursor = db.cursor()
 
